@@ -575,10 +575,13 @@ class SOSCleaner:
     def _clean_line(self, l):
         '''this will return a line with obfuscations for all possible variables, hostname, ip, etc.'''
 
+        new_line = l
         if not self.noips:
-          new_line = self._sub_ip(l)                  # IP substitution
+          new_line = self._sub_ip(new_line)                  # IP substitution
+
         if not self.nohostnames:
           new_line = self._sub_hostname(new_line)     # Hostname substitution
+
         new_line = self._sub_keywords(new_line)     # Keyword Substitution
 
         return new_line

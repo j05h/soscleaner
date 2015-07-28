@@ -15,6 +15,12 @@ def main():
     parser.add_option("-d", "--domain", action="append", default=[], dest="domains",
         help="additional domain to obfuscate (optional). use a flag for each additional domain",
         metavar="DOMAIN")
+    parser.add_option("-n", "--no-hostname", action="store_true", default=False, dest='nohostnames',
+        help="Disable Hostname Obfuscation",
+        metavar="NODOMAIN")
+    parser.add_option("-i", "--no-ip", action="store_true", default=False, dest='noips',
+        help="Disable IP Obfuscation",
+        metavar="NOIPS")
     parser.add_option("-f", "--file", action="append", default=[], dest="files",
         help="addtional files to be analyzed in addition to or in exception of sosreport",
         metavar="FILES")

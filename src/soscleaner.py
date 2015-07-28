@@ -667,6 +667,12 @@ class SOSCleaner:
         self._get_disclaimer()
         if options.domains:
             self.domains = options.domains
+        if options.nohostnames:
+            self.nohostnames = options.nohostnames
+            self.logger.con_out("no hostnames %s", options.nohostnames)
+        if options.noips:
+            self.noips = options.noips
+            self.logger.con_out("no ips %s", options.noips)
         if options.keywords:
             self.keywords = options.keywords
             self._keywords2db()

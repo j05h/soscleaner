@@ -32,7 +32,7 @@ x = SOSCleaner('path/to/sosreport/directory')
 x.clean_report()
 ```
 
-* If intalling the RPM and/or using the executable 
+* If intalling the RPM and/or using the executable
 
 ```
 $ /usr/bin/soscleaner --help
@@ -47,6 +47,8 @@ Options:
   -d DOMAIN, --domain=DOMAIN
                         additional domain to obfuscate (optional). use a flag
                         for each additional domain
+  -n, --no-hostname     Disable Hostname Obfuscation
+  -i, --no-ip           Disable IP Obfuscation
   -f FILES, --file=FILES
                         addtional files to be analyzed in addition to or in
                         exception of sosreport
@@ -63,7 +65,7 @@ How Do I See The Obfuscated Data?
 ---------------------------------
 The data is available from within the Python class, and as an option passed into the executable script.
 
-* If accessing the Python class directly 
+* If accessing the Python class directly
 
 ```
 from soscleaner import SOSCleaner
